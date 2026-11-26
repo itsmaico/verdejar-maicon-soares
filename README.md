@@ -12,7 +12,7 @@ Todos os dados são sintéticos, gerados com seed fixa (2026), e nenhuma informa
 
 - **Extração:** consome a API paginada (`/clientes` e `/pedidos`) e lê o `produtos.csv`, guardando os dados brutos em `brutos/`.
 - **Transformação:** trata seis problemas de qualidade declarados nos dados (e-mails ausentes, UF em caixa mista, datas em dois formatos, valores com vírgula, pedidos repetidos e totais divergentes).
-- **Carga:** grava as tabelas `clientes`, `produtos`, `pedidos` e `itens\_pedido` no PostgreSQL, de forma idempotente.
+- **Carga:** grava as tabelas `clientes`, `produtos`, `pedidos` e `itens_pedido` no PostgreSQL, de forma idempotente.
 - **Validação:** testes com pytest, reconciliação entre origem e destino e consultas SQL de conferência.
 
 ## Estrutura do projeto
@@ -74,7 +74,7 @@ Todos os comandos são para o PowerShell do Windows, executados na raiz do proje
 
 ```powershell
 cd insumos
-python gerar\_dados.py
+python gerar_dados.py
 cd ..
 ```
 
@@ -112,7 +112,7 @@ cd ..
 **5. Definir a senha na sessão do terminal** (não é gravada em arquivo):
 
 ```powershell
-$env:PGPASSWORD="SENHA\_ESCOLHIDA"
+$env:PGPASSWORD="SENHA_ESCOLHIDA"
 ```
 
 A biblioteca `psycopg` lê essa variável automaticamente. Ela vale só para o terminal em que foi definida e, caso fechado, será necessário informar a senha novamente com o comando.
@@ -134,7 +134,7 @@ pytest
 **8. Executar as consultas de validação:**
 
 ```powershell
-docker cp consultas\_validacao.sql verdejar-pg:/consultas.sql
+docker cp consultas_validacao.sql verdejar-pg:/consultas.sql
 docker exec verdejar-pg psql -U postgres -d verdejar -f /consultas.sql
 ```
 
