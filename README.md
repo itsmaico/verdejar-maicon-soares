@@ -1,6 +1,6 @@
 # README
 
-![Banner da Verdejar](https://app.notion.comassets/verdejar\_banner\_github.png)
+![Banner da Verdejar]([https://app.notion.comassets/verdejar\_banner\_github.png](https://github.com/itsmaico/verdejar-maicon-soares/blob/ad65acbb7271edc1d29fa1f80ad5988c6c527eb0/assets/verdejar_banner_github.png))
 
 Projeto do Desafio Final do Bootcamp (Fellowship OCT26 AI-Driven Data Engineering, Fase 1).
 
